@@ -33,6 +33,152 @@ lib/
  └─ widgets/
      └─ (componentes adicionales si se agregan)
 ```
+
+## ⚙️ Funcionamiento
+
+### 🌗 1. Tema Global
+
+Definido en `lib/theme/app_theme.dart`, crea dos instancias principales:
+
+- **`AppTheme.lightTheme`** → para el modo claro  
+- **`AppTheme.darkTheme`** → para el modo oscuro  
+
+Ambos temas usan `ColorScheme.fromSeed()` para generar paletas visualmente consistentes y modernas, asegurando una armonía entre colores primarios, secundarios y de superficie.
+
+Además, se agregan extensiones personalizadas que amplían el sistema de temas estándar de Flutter, permitiendo definir estilos adicionales como gradientes y colores de estado:
+
+```dart
+extensions: [
+  AuthThemeExtension.light,
+  CustomThemeExtension.light,
+]
+```
+
+Estas extensiones son clave para personalizar las pantallas de autenticación y otros componentes reutilizables sin romper la coherencia visual del tema global.
+
+### 🔄 2. Cambio Dinámico de Tema
+
+En `main.dart` se gestiona el modo de tema con un `ThemeMode` que permite alternar entre el tema claro y oscuro:
+
+```dart
+theme: AppTheme.lightTheme,
+darkTheme: AppTheme.darkTheme,
+themeMode: _themeMode,
+```
+
+El DashboardScreen incluye un Switch que permite alternar entre los modos en tiempo real.
+Cada vez que el usuario cambia el estado del switch, toda la aplicación actualiza su apariencia:
+
+```dart
+DashboardScreen(
+  isDarkMode: _themeMode == ThemeMode.dark,
+  onThemeChanged: _toggleTheme,
+);
+```
+
+### 🎨 3. Tema Local
+
+El archivo `appearance_settings_screen.dart` demuestra cómo aplicar un tema distinto solo a una vista, usando `Theme.of(context).copyWith()`:
+
+```dart
+final localTheme = Theme.of(context).copyWith(
+  appBarTheme: AppBarTheme(backgroundColor: Colors.deepPurple),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+  ),
+);
+return Theme(data: localTheme, child: Scaffold(...));
+```
+De esta forma se personaliza únicamente esa pantalla, sin alterar el tema global de la aplicación.
+
+### 🔐 4. Pantallas de Autenticación
+
+`auth_login_screen.dart` y `auth_register_screen.dart` utilizan AuthThemeExtension para definir gradientes, colores y bordes adaptados a cada modo de tema:
+
+```dart
+final auth = Theme.of(context).extension<AuthThemeExtension>();
+final gradient = auth?.loginGradient;
+```
+
+Esto permite diferenciar visualmente cada pantalla sin romper la coherencia general del diseño.
+
+### 🧱 ThemeExtension Personalizadas
+
+AuthThemeExtension:
+Controla gradientes, colores y bordes de las pantallas de autenticación.
+
+CustomThemeExtension:
+Define colores de estado como success, warning, info, reutilizables en toda la app.
+
+Ambas se integran dentro del ThemeData global mediante la propiedad extensions: para acceder a sus valores desde cualquier parte del código.
+
+### 🧪 Ejecución del proyecto
+
+`
+flutter pub get
+flutter run
+`
+
+En el archivo pubspec.yaml asegúrate de incluir las dependencias de materiales y los recursos de imágenes:
+
+`
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/upeu.png
+`
+
+## 📸 Evidencias recomendadas
+
+Incluye estas capturas para documentar los resultados visuales:
+
+| Escenario | Descripción |
+|------------|-------------|
+| 🟢 Dashboard – Modo claro | Vista general del tema claro |
+| ⚫ Dashboard – Modo oscuro | Vista general del tema oscuro |
+| 🟣 Login – Modo claro | Fondo degradado celeste, card blanca |
+| 🔵 Login – Modo oscuro | Fondo degradado oscuro, card gris |
+| 🟡 Register – Modo claro | Fondo blanco, acento azul |
+| 🟠 Register – Modo oscuro | Fondo oscuro, texto claro |
+| 🎨 Apariencia (tema local) | Demostración de `copyWith()` en pantalla local |
+
+```markdown
+![Dashboard claro](assets/docs/dashboard_light.png)
+![Dashboard oscuro](assets/docs/dashboard_dark.png)
+![Login claro](assets/docs/login_light.png)
+![Login oscuro](assets/docs/login_dark.png)
+![Register claro](assets/docs/register_light.png)
+![Register oscuro](assets/docs/register_dark.png)
+![Tema local claro](assets/docs/local_light.png)
+![Tema local oscuro](assets/docs/local_dark.png)
+```
+
+Guarda las capturas en una carpeta `/docs` dentro del proyecto, por ejemplo:
+`
+flutter-theme-app-alcca/
+├─ lib/
+├─ assets/
+├─ docs/
+│ ├─ dashboard_light.png
+│ ├─ dashboard_dark.png
+│ ├─ login_light.png
+│ ├─ login_dark.png
+│ ├─ register_light.png
+│ ├─ register_dark.png
+│ ├─ local_light.png
+│ └─ local_dark.png
+`
+
+## 👤 Autor
+
+**Elias Jorge Alcca Condori**  
+Proyecto académico: *flutter-theme-app-alcca*  
+📅 2025  
+🟣 Universidad Peruana Unión  
+📘 Curso: Desarrollo de Aplicaciones Móviles – Flutter
+
+
+Universidad Peruana Unión
 Coppyright:
 
 NekiroVT © coppyright - Todos los derechos reservados 2025
