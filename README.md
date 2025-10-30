@@ -142,7 +142,7 @@ Incluye estas capturas para documentar los resultados visuales:
 | 🟠 Register – Modo oscuro | Fondo oscuro, texto claro |
 | 🎨 Apariencia (tema local) | Demostración de `copyWith()` en pantalla local |
 
-```markdown
+
 ![Dashboard claro](assets/docs/dashboard_light.png)
 ![Dashboard oscuro](assets/docs/dashboard_dark.png)
 ![Login claro](assets/docs/login_light.png)
@@ -151,7 +151,7 @@ Incluye estas capturas para documentar los resultados visuales:
 ![Register oscuro](assets/docs/register_dark.png)
 ![Tema local claro](assets/docs/local_light.png)
 ![Tema local oscuro](assets/docs/local_dark.png)
-```
+
 
 Guarda las capturas en una carpeta `/docs` dentro del proyecto, por ejemplo:
 `
