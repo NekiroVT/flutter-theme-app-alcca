@@ -143,18 +143,6 @@ Incluye estas capturas para documentar los resultados visuales:
 | 🎨 Apariencia (tema local claro) | Demostración de `copyWith()` en pantalla local ![Tema local claro](assets/docs/local_light.png)|
 | 🎨 Apariencia (tema local oscuro) | Demostración de `copyWith()` en pantalla local ![Tema_local oscuro](assets/docs/local_dark.png)|
 
-
-![Dashboard claro](assets/docs/dashboard_light.png)
-![Dashboard oscuro](assets/docs/dashboard_dark.png)
-![Login claro](assets/docs/login_light.png)
-![Login oscuro](assets/docs/login_dark.png)
-![Register claro](assets/docs/register_light.png)
-![Register oscuro](assets/docs/register_dark.png)
-![Tema local claro](assets/docs/local_light.png)
-![Tema_local oscuro](assets/docs/local_dark.png)
-
-
-
 Guarda las capturas en una carpeta `/docs` dentro del proyecto, por ejemplo:
 ```
 flutter-theme-app-alcca/
