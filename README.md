@@ -135,12 +135,13 @@ Incluye estas capturas para documentar los resultados visuales:
 | Escenario | Descripción |
 |------------|-------------|
 | 🟢 Dashboard – Modo claro | Vista general del tema claro ![Dashboard claro](assets/docs/dashboard_light.png)|
-| ⚫ Dashboard – Modo oscuro | Vista general del tema oscuro |
-| 🟣 Login – Modo claro | Fondo degradado celeste, card blanca |
-| 🔵 Login – Modo oscuro | Fondo degradado oscuro, card gris |
-| 🟡 Register – Modo claro | Fondo blanco, acento azul |
-| 🟠 Register – Modo oscuro | Fondo oscuro, texto claro |
-| 🎨 Apariencia (tema local) | Demostración de `copyWith()` en pantalla local |
+| ⚫ Dashboard – Modo oscuro | Vista general del tema oscuro ![Dashboard oscuro](assets/docs/dashboard_dark.png)|
+| 🟣 Login – Modo claro | Fondo degradado celeste, card blanca ![Login claro](assets/docs/login_light.png)|
+| 🔵 Login – Modo oscuro | Fondo degradado oscuro, card gris ![Login oscuro](assets/docs/login_dark.png)|
+| 🟡 Register – Modo claro | Fondo blanco, acento azul ![Register claro](assets/docs/register_light.png)|
+| 🟠 Register – Modo oscuro | Fondo oscuro, texto claro ![Register oscuro](assets/docs/register_dark.png)|
+| 🎨 Apariencia (tema local claro) | Demostración de `copyWith()` en pantalla local ![Tema local claro](assets/docs/local_light.png)|
+| 🎨 Apariencia (tema local oscuro) | Demostración de `copyWith()` en pantalla local ![Tema_local oscuro](assets/docs/local_dark.png)|
 
 
 ![Dashboard claro](assets/docs/dashboard_light.png)
@@ -150,7 +151,8 @@ Incluye estas capturas para documentar los resultados visuales:
 ![Register claro](assets/docs/register_light.png)
 ![Register oscuro](assets/docs/register_dark.png)
 ![Tema local claro](assets/docs/local_light.png)
-![Tema local oscuro](assets/docs/local_dark.png)
+![Tema_local oscuro](assets/docs/local_dark.png)
+
 
 
 Guarda las capturas en una carpeta `/docs` dentro del proyecto, por ejemplo:
