@@ -134,7 +134,7 @@ Incluye estas capturas para documentar los resultados visuales:
 
 | Escenario | Descripción |
 |------------|-------------|
-| 🟢 Dashboard – Modo claro | ![Dashboard claro](assets/docs/dashboard_light.png)|
+| 🟢 Dashboard – Modo claro | Vista general del tema claro ![Dashboard claro](assets/docs/dashboard_light.png)|
 | ⚫ Dashboard – Modo oscuro | Vista general del tema oscuro |
 | 🟣 Login – Modo claro | Fondo degradado celeste, card blanca |
 | 🔵 Login – Modo oscuro | Fondo degradado oscuro, card gris |
