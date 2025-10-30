@@ -1,16 +1,45 @@
-# flutter_theme_app_alcca
+# 🌙 flutter-theme-app-alcca
 
-A new Flutter project.
+Aplicación Flutter diseñada para **demostrar el uso avanzado de temas personalizados**, modo **claro/oscuro**, y **ThemeExtension** para crear experiencias visuales coherentes, modernas y adaptables.
 
-## Getting Started
+Este proyecto muestra cómo aplicar un **tema global**, un **tema local por pantalla**, y cómo **extender ThemeData** para personalizar componentes como pantallas de login y registro.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🎯 Objetivo
+
+- Aplicar **temas personalizados** en Flutter.  
+- Analizar el **impacto visual** del tema en diferentes pantallas.  
+- Implementar **modo claro y oscuro** dinámico con `ThemeMode`.  
+- Crear un **tema local** con `Theme.of(context).copyWith()`.  
+- Extender el sistema de temas usando **ThemeExtension** para colores, gradientes y bordes.  
+
+---
+
+## 🧩 Estructura del proyecto
+
+```text
+lib/
+ ├─ main.dart
+ ├─ theme/
+ │   ├─ app_theme.dart                 # Tema global (light y dark)
+ │   ├─ auth_theme_extension.dart      # Extensión para pantallas de autenticación
+ │   └─ custom_theme_extension.dart    # Extensión para colores personalizados
+ ├─ presentation/
+ │   ├─ dashboard_screen.dart          # Pantalla principal con switch de tema
+ │   ├─ auth_login_screen.dart         # Login adaptado a claro/oscuro
+ │   ├─ auth_register_screen.dart      # Registro adaptado a claro/oscuro
+ │   └─ appearance_settings_screen.dart # Ejemplo de tema local
+ └─ widgets/
+     └─ (componentes adicionales si se agregan)
+```
+Coppyright:
+
+NekiroVT © coppyright - Todos los derechos reservados 2025
+
+Aprende Flutter en:
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
