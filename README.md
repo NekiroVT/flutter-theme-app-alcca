@@ -154,7 +154,7 @@ Incluye estas capturas para documentar los resultados visuales:
 
 
 Guarda las capturas en una carpeta `/docs` dentro del proyecto, por ejemplo:
-`
+```
 flutter-theme-app-alcca/
 ├─ lib/
 ├─ assets/
@@ -167,7 +167,7 @@ flutter-theme-app-alcca/
 │ ├─ register_dark.png
 │ ├─ local_light.png
 │ └─ local_dark.png
-`
+```
 
 ## 👤 Autor
 
